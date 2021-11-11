@@ -2,7 +2,8 @@ html {
     font-size: 100%;
     line-height: 1.5rem;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
 }
 
@@ -51,7 +52,7 @@ img {
     position: absolute;
     top: 0;
     bottom: 0;
-    background-color: rgba(59, 68, 105, 0.4);
+    background-color: rgba(80, 83, 97, 0.664);
 }
 
 .hero-image {
@@ -131,7 +132,7 @@ img {
     transition: 0.5s ease-in-out;
     padding: 1rem;
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: .25rem;
     height: 6rem;
     width: 100%;
  
@@ -181,3 +182,6 @@ img {
         line-height: 6rem;
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
