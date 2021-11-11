@@ -122,6 +122,7 @@ img {
 }
 
 .gallery-text {
+    background: linear-gradient(rgba(0, 0, 0, 0.781),rgba(0, 0, 0, 0));
     position: absolute;
     color: white;
     top: 0;
@@ -131,8 +132,9 @@ img {
     padding: 1rem;
     font-size: 1rem;
     line-height: 1rem;
-    height: 5rem;
+    height: 6rem;
     width: 100%;
+ 
  }
  
  .gallery-text:hover {
