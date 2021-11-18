@@ -169,6 +169,7 @@ img {
     align-items: center;
     justify-content: center;
     max-height: 30%;
+    width: 100%;
     
  }
  .about-card-img {
@@ -195,6 +196,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 50%;
 
      
  }
