@@ -1,0 +1,368 @@
+html {
+    font-size: 100%;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: var(--montserrat);
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-family: var(--bebas);
+}
+
+:root {
+    --primary-background: #0B4B59;
+    --primary-background-transparent: #0b4b5986;
+    --secondary-background: #05F2AF;
+    --bebas: 'Bebas Neue', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* hero style */
+.hero-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0px;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-image-box {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+.hero-image-box::after {
+    content: "";
+    height: 100vh;
+    width: 100%;
+    position: absolute; 
+    background-color: var(--primary-background-transparent);
+   
+}
+
+.hero-image {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.hero-text-box {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    align-self: center;
+    padding: 1rem;
+    z-index: 10;
+    text-align: center;
+}
+
+.hero-heading {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero-text {
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Portfolio Gallery */
+.portfolio-container {
+    margin: 1rem 1rem;
+}
+
+.portfolio-container h1 {
+    color: black;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 0.5rem;
+    grid-auto-rows: 300px;
+}
+
+.gallery-item {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+}
+
+.gallery-img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.5);
+}
+
+.gallery-text {
+    background: linear-gradient(rgba(0, 0, 0, 0.781),rgba(0, 0, 0, 0));
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: .25rem;
+    height: 6rem;
+    width: 100%;
+ 
+ }
+ 
+ .gallery-text:hover {
+     opacity: 1;
+ }
+ 
+ .gallery-text-header {
+     font-size: 2rem;
+     line-height: 2rem;
+ }
+
+ /* about me */
+
+ .about-container {
+     padding: 2rem 1rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     height: 100vh;
+     width: 100%;
+     background-color: #15A0BF;
+ }
+ .img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 30%;
+    width: 100%;
+    
+ }
+ .about-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 
+    7px 7px 16px 0  #094b5a7a,
+    -7px -7px 16px 0  #9adfee5e;
+    margin: 7px;
+    padding: 7px;
+ }
+ #about-rectangle {
+     background-color: var(--secondary-background);
+     margin: 2rem 0;
+     max-height: 2rem;
+     min-height: 1rem;
+     
+ }
+ 
+ .about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50%;
+
+     
+ }
+ .about-card-header{
+     color: white;
+     align-self: flex-end;
+     margin: 0px;
+     
+ }
+ .about-card-text {
+     color: white;
+ }
+a {
+    text-decoration: none;
+}
+.about-card-socials-container {
+    align-self: flex-end;
+    justify-self: center;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.social-text {
+    display: none;
+    transition: 0.5s;
+    padding: 5px;
+    color: var(--secondary-background);
+}
+.icon:hover .social-text {
+    display: block;
+}
+.icon {
+    height: 60px;
+    width: 60px;
+    margin: 12px;
+    box-shadow: 
+    7px 7px 16px 0  #094b5a7a,
+    -7px -7px 16px 0  #9adfee5e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon i {
+    font-size: 25px;
+    color: var(--secondary-background);
+}
+.icon:hover {
+    border-radius: 20px;
+    width: 140px;
+}
+.icon:active {
+    box-shadow: 
+    5px 5px 10px 0   #094b5a7a inset,
+    -5px -5px 10px 0 #9adfee5e inset;
+}
+
+/* media queries */
+
+@media (max-width: 600px) {
+    .hero-heading {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    .hero-text {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .portfolio-container h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .about-card {
+        max-height: 60%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: .2fr 1fr .4fr;
+    }
+    .about-card-header {
+        font-size: 5rem;
+        line-height: 5rem;
+        align-self: flex-start;
+    }
+    .about-card-text {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    #about-rectangle{
+        max-height: 2rem;
+        width: 100%;
+    }
+    .about-card-socials-container {
+        justify-self: center;
+        padding: 0;
+    }
+    
+}
+@media (min-width:600px) {
+    .hero-heading {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .hero-text {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    .portfolio-container h1{
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-left: 1rem;
+    }
+
+    .about-card-header{
+        font-size: 7rem;
+        line-height: 7rem;
+        align-self: flex-start;
+    }
+    .about-card-text {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+
+    #about-rectangle{
+        max-height: 2rem;
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px)  {
+    .portfolio-container h1{
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+        padding-left: 1rem;
+    }
+    .about-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+   
+    }
+    .about-card-img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       overflow: hidden;
+    }
+    #about-rectangle {
+        max-width: 2rem;
+        min-width: 1rem;
+        min-height: 100%;
+        margin: 0 2rem;
+    }
+    .about-card{
+        max-width: 60%;
+    }
+    .about-card-header{
+        font-size: 8rem;
+        line-height: 8rem;
+        align-self: flex-start;
+    }
+    .about-card-text {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
